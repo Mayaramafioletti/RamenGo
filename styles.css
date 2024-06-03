@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    color: white;
+    text-align: left;
+    overflow: hidden;
+    background: url('assets/pattern-vermelha.png') repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centraliza o conteúdo do header */
+}
+
+.header-content {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    max-width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.header-title {
+    position: relative;
+    display: flex;
+}
+
+header h1 {
+    font-size: 160px;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    color: #FAFAED;
+    position: relative;
+    z-index: 4;
+    /* Garante que a exclamação esteja acima da imagem da entregadora */
+}
+
+header h2 {
+    font-size: 48px;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-weight: 900;
+    letter-spacing: 10px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin: 0;
+    color: #FFC024;
+}
+
+header p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+    color: white;
+}
+
+.order-button {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.circle-background {
+    position: absolute;
+    width: 587px;
+    height: 587px;
+    background-color: #730000;
+    border-radius: 50%;
+    z-index: 1;
+    /* Centraliza o círculo atrás da entregadora */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delivery-person {
+    position: relative;
+    z-index: 2;
+    max-width: 666px;
+    justify-content: center;
+}
+
+.balloon {
+    position: absolute;
+    z-index: 2;
+}
+
+.balloon-blue {
+    top: 5%;
+    left: 28%;
+    max-width: 116px;
+
+}
+
+.balloon-yellow {
+    bottom: 29%;
+    right: 27%;
+    max-width: 106px;
+
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .order-button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .delivery-person {
+        max-width: 300px;
+        right: 5%;
+    }
+
+    .balloon {
+        max-width: 100px;
+    }
+
+    .balloon-blue {
+        top: 10%;
+        left: 5%;
+    }
+
+    .balloon-yellow {
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .circle-background {
+        width: 300px;
+        height: 300px;
+    }
+}
