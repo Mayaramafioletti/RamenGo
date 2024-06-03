@@ -12,14 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const option = document.createElement("div");
     option.classList.add("option");
     option.innerHTML = `
-            <img src="${item.imageInactive}" alt="${item.name}" />
-            <p>${item.name}</p>
-        `;
+      <img src="${item.imageInactive}" alt="${item.name}" />
+      <p>${item.name}</p>
+      <p>${item.description}</p>
+      <p>US$ ${item.price}</p>
+    `;
     option.addEventListener("click", () => {
-      document
-        .querySelectorAll(`#${type}-options .option`)
-        .forEach((el) => el.classList.remove("selected"));
+      document.querySelectorAll(`#${type}-options .option`).forEach((el) => {
+        el.classList.remove("selected");
+        el.querySelector("img").src = el.dataset.imageInactive; // Mudar para imagem inativa
+      });
+
       option.classList.add("selected");
+      option.querySelector("img").src = item.imageActive; // Mudar para imagem ativa
+
       if (type === "broth") {
         selectedBroth = item.id;
       } else {
@@ -27,6 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       updateButtonState();
     });
+
+    option.dataset.imageInactive = item.imageInactive; // Armazena a imagem inativa no dataset
+    option.dataset.imageActive = item.imageActive; // Armazena a imagem ativa no dataset
+
     return option;
   }
 

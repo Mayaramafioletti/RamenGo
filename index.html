@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,42 +7,44 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@400;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
-        <img src="assets/balao-azul.png" alt="Blue Balloon" class="balloon balloon-blue">
+        <img src="assets/logo-ramenGO.png" alt="RamenGo Logo" class="logo-ramenGO">
+        
+        <div class="circle-background">
+            <img src="assets/entregadora.png" alt="Delivery Person" class="delivery-person">
+            <img src="assets/balao-azul.png" alt="Blue Balloon" class="balloon balloon-blue">
+            <img src="assets/balao-amarelo.png" alt="Yellow Balloon" class="balloon balloon-yellow">
+            </div>
         <div class="header-content">
             <div class="header-title">
                 <h2>ラーメン</h2>
                 <h1>GO!</h1>
             </div>
-            <p>Enjoy a good ramen in the comfort of your house. Create your own ramen, and choose your favorite flavour
-                combination!</p>
+            <p>Enjoy a good ramen in the comfort of your house. Create your own ramen, and choose your favorite flavour combination!
+            </p>
             <a href="#" class="order-button">ORDER NOW</a>
         </div>
-        <div class="circle-background">
-            <img src="assets/entregadora.png" alt="Delivery Person" class="delivery-person">
-        </div>
-        <img src="assets/balao-amarelo.png" alt="Yellow Balloon" class="balloon balloon-yellow">
     </header>
 
     <main>
         <section id="broth-section">
-            <h2>Select Your Broth</h2>
-            <div id="broth-options"></div>
+            <h2>First things first: select your favorite broth.</h2>
+            <p>It will give the whole flavor on your ramen soup.</p>
+            <div id="broth-options" class="options-container"></div>
         </section>
 
         <section id="protein-section">
-            <h2>Select Your Protein</h2>
-            <div id="protein-options"></div>
+            <h2>It's time to choose (or not) your meat!</h2>
+            <p>Some people love, some don't. We have options for all tastes.</p>
+            <div id="protein-options" class="options-container"></div>
         </section>
 
-        <button id="place-order">Place Order</button>
+        <button id="place-order" disabled>Place My Order</button>
 
         <div id="order-status"></div>
     </main>
 
     <script src="app.js"></script>
 </body>
-
 </html>
