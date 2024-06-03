@@ -38,9 +38,8 @@ O objetivo do teste é demonstrar habilidades em HTML, CSS e JavaScript (sem o u
 
 ### Instalação
 Clone o repositório:
-   ``bash
-   git clone https://github.com/seu-usuario/ramengo.git
-   cd ramengo
+   `git clone https://github.com/seu-usuario/ramengo.git
+   cd ramengo`
 
 ### Estrutura do Projeto
 index.html: Estrutura básica da aplicação.
