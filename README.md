@@ -42,9 +42,9 @@ Clone o repositório:
    cd ramengo`
 
 ### Estrutura do Projeto
-index.html: Estrutura básica da aplicação.
-styles.css: Estilos da aplicação.
-app.js: Lógica da aplicação, incluindo consumo de APIs e manipulação do DOM.
+- index.html: Estrutura básica da aplicação.
+- styles.css: Estilos da aplicação.
+- app.js: Lógica da aplicação, incluindo consumo de APIs e manipulação do DOM.
 
 ## Conclusão
 
