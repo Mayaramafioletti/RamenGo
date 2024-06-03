@@ -21,27 +21,30 @@
                 <h2>ラーメン</h2>
                 <h1>GO!</h1>
             </div>
-            <p>Enjoy a good ramen in the comfort of your house. Create your own ramen, and choose your favorite flavour
-                combination!
+            <p>Enjoy a good ramen in the comfort of your house. Create your own ramen, and choose your favorite flavour combination!
             </p>
             <a href="#" class="order-button">ORDER NOW <img src="assets/seta-order-now.png" alt="yellow arrow" class="arrow"></a>
         </div>
     </header>
 
     <main>
-        <section id="broth-section">
+        <div id="broth-section">
             <h2>First things first: select your favorite broth.</h2>
             <p>It will give the whole flavor on your ramen soup.</p>
-            <div id="broth-options" class="options-container"></div>
-        </section>
-
-        <section id="protein-section">
+            <div id="broth-options">
+            </div>
+            <div id="broth-dots" class="carousel-dots"></div>
+        </div>
+        
+        <div id="protein-section">
             <h2>It's time to choose (or not) your meat!</h2>
             <p>Some people love, some don't. We have options for all tastes.</p>
-            <div id="protein-options" class="options-container"></div>
-        </section>
+            <div  id="protein-options">
+            </div>
+            <div id="protein-dots" class="carousel-dots"></div>
 
-        <!-- Adicione o contêiner centralizado aqui -->
+        </div>
+
         <div class="centralized-container">
             <button id="place-order" disabled>PLACE MY ORDER<img src="assets/seta-branca.png" alt="yellow arrow"
                     class="arrow"></button>
@@ -62,9 +65,8 @@
                 <img id="bowing-image" src="./assets/bowing.png" alt="bowing Image">
                 <p id="title">どうもありがとうございます。</p>
                 <h1>Your order is being prepared</h1>
-                <p>Hold on, when you least expect you will be eating your ramen.</p>
-                <a id="new-order-button">PLACE NEW ORDER<img src="assets/seta-order-now.png" alt="yellow arrow"
-                        class="arrow"></a>
+                <p id="desciption-success">Hold on, when you least expect you will be eating your ramen.</p>
+                <a id="new-order-button">PLACE NEW ORDER<img src="assets/seta-order-now.png" alt="yellow arrow" class="arrow"></a>
             </div>
         </div>
     </section>

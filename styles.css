@@ -29,7 +29,7 @@ header {
 
 .header-content {
     position: absolute;
-    left: 0;
+    right: calc(50% + 288px);
     z-index: 3;
     max-width: 200px;
     padding: 20px;
@@ -48,16 +48,16 @@ header h1 {
     color: #FAFAED;
     position: relative;
     z-index: 4;
+    top: 50px;
 }
 
 header h2 {
     font-size: 48px;
-    font-family: 'Rounded Mplus 1c', sans-serif;
     font-weight: 900;
     letter-spacing: 10px;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    margin: 0;
+    margin: 0 8px 0 -15px;
     color: #FFC024;
 }
 
@@ -69,19 +69,19 @@ header p {
 
 .order-button {
     display: flex;
-        justify-content: space-between;
-        background-color: #1820EF;
+    justify-content: space-between;
+    background-color: #1820EF;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 30px;
     font-size: 14px;
-        font-weight: 800;
-    }
-    
-    .arrow {
-        width: 20px;
-        height: 16px;
+    font-weight: 800;
+}
+
+.arrow {
+    width: 20px;
+    height: 16px;
 }
 
 .circle-background {
@@ -125,7 +125,10 @@ main {
     background-color: #FAFAED;
 }
 
-section#broth-section#protein-section {
+#broth-options, #protein-options{
+    
+    display: flex;
+    justify-content: center;
     margin-bottom: 40px;
 }
 
@@ -151,6 +154,7 @@ p {
     box-shadow: 0px 4px 12px 0px #E0DBBF99;
     border-radius: 10px;
     padding: 20px;
+    margin-right: 63px;
     width: 300px;
     text-align: center;
     cursor: pointer;
@@ -205,17 +209,17 @@ p {
 /* Modifique o estilo do botão conforme necessário */
 button#place-order {
     display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
     background-color: #1820EF;
     color: white;
     width: 215px;
-        height: 60px;
+    height: 60px;
     text-decoration: none;
     border-radius: 30px;
     font-size: 14px;
-        font-weight: 800;
+    font-weight: 800;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -226,12 +230,12 @@ button#place-order:disabled {
     cursor: not-allowed;
 }
 
-
 #order-status {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
 }
+
 .hidden {
     display: none;
 }
@@ -269,13 +273,12 @@ button#place-order:disabled {
 }
 
 #success-image {
-    max-width: 300px;
-    margin-bottom: 20px;
+    max-width: 644px;
 }
 
 #success-order {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 0;
     font-weight: bold;
     color: #FFF;
 }
@@ -283,6 +286,7 @@ button#place-order:disabled {
 #order-details {
     font-size: 32px;
     color: #FFC024;
+    margin: 0;
 }
 
 .success-right {
@@ -319,7 +323,7 @@ button#place-order:disabled {
     background-color: #1820EF;
     color: white;
     padding: 0 16px;
-    margin-top: 16px;
+    margin: 0 16px 72px;
     text-decoration: none;
     border-radius: 30px;
     font-size: 14px;
@@ -332,41 +336,135 @@ button#place-order:disabled {
 .logo-ramenGO#red {
     padding-top: 32px;
 }
+.carousel-dots {
+    display: none;
+}
+
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 3em;
+    .header-content {
+        position: static; /* Remove absolute positioning */
+        margin: 0 auto; /* Center the content */
+        max-width: 300px;
+        padding: 20px;
+        text-align: center;
     }
 
-    header p {
-        font-size: 1.2em;
+    .header-title {
+        flex-direction: column;
     }
+
+    header h2 {
+        letter-spacing: 0;
+        writing-mode: horizontal-tb;
+        text-orientation: sideways;
+        height: 30px;
+    }
+
+    header h1 {
+        font-size: 120px;
+        top: 0;
+        position: static;
+        height: 140px;
+    }
+    .logo-ramenGO {
+        margin-bottom: 32px;
+        padding-left: 0;
+        align-self: center;
+
+    }
+
 
     .order-button {
-        font-size: 1.2em;
-        padding: 10px 20px;
-    }
-
-    .delivery-person {
-        max-width: 300px;
-        right: 5%;
-    }
-
-    .balloon {
-        max-width: 100px;
-    }
-
-    .balloon-blue {
-        top: -10px;
-        left: -75px;
-    }
-
-    .balloon-yellow {
-        bottom: -50px;
-        right: -60px;
+        display: none;
     }
 
     .circle-background {
-        width: 300px;
-        height: 300px;
+        width: 231px;
+        height: 231px;
+    }
+
+    .delivery-person {
+        max-width: 262px;
+    }
+
+    .balloon-blue {
+        left: -15px;
+        max-width: 45px;
+    }
+
+    .balloon-yellow {
+        bottom: 50px;
+        right: -21px;
+        max-width: 41px;
+    }
+    #broth-options, #protein-options {
+        display: flex;
+        justify-content: flex-start; /* Ensure items are aligned to the start */
+        overflow-x: auto; /* Ensure horizontal scrolling is enabled */
+        scroll-snap-type: x mandatory; /* Enable snap scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+    }
+
+    .option {
+        width: calc(100% - 72px); /* Ensure the options take full width */
+        margin-right: 20px; /* Margin adjustments */
+        flex: 0 0 auto; /* Garantir que os itens não encolham */
+        scroll-snap-align: start; /* Alinhar os itens na rolagem */
+        margin-bottom: 10px;
+    }
+
+    #broth-options::-webkit-scrollbar, #protein-options::-webkit-scrollbar {
+        display: none; /* Ocultar barra de rolagem no Chrome, Safari e Opera */
+    }
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .carousel-dots .dot {
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        background-color: #E0DBBF; /* Cor padrão */
+        border-radius: 50%;
+        cursor: pointer;
+        transition: width 0.3s, background-color 0.3s;
+    }
+    
+    .carousel-dots .dot.active {
+        background-color: #FF4E42; /* Cor da bolinha ativa */
+        width: 36px; /* Largura da bolinha ativa */
+        border-radius: 8px;
+    }
+   
+    #order-details {
+        font-size: 24px;
+        margin-bottom: 100px;
+    }
+    .logo-ramenGO#red {
+        padding-top: 20px;
+        width: 125px;
+        position: static;
+    }
+   
+    .success-container {
+        flex-direction: column;
+    }
+
+    .success-left,
+    .success-right {
+        width: 100%;
+    }
+    #success-image {
+        max-width: 488px;
+    }
+    #bowing-image {
+        margin-top: 71px;
+    }
+    #desciption-success {
+        margin: 24px 8px;
     }
 }
