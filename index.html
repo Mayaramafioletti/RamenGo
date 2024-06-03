@@ -10,20 +10,21 @@
 <body>
     <header>
         <img src="assets/logo-ramenGO.png" alt="RamenGo Logo" class="logo-ramenGO">
-        
+
         <div class="circle-background">
             <img src="assets/entregadora.png" alt="Delivery Person" class="delivery-person">
             <img src="assets/balao-azul.png" alt="Blue Balloon" class="balloon balloon-blue">
             <img src="assets/balao-amarelo.png" alt="Yellow Balloon" class="balloon balloon-yellow">
-            </div>
+        </div>
         <div class="header-content">
             <div class="header-title">
                 <h2>ラーメン</h2>
                 <h1>GO!</h1>
             </div>
-            <p>Enjoy a good ramen in the comfort of your house. Create your own ramen, and choose your favorite flavour combination!
+            <p>Enjoy a good ramen in the comfort of your house. Create your own ramen, and choose your favorite flavour
+                combination!
             </p>
-            <a href="#" class="order-button">ORDER NOW</a>
+            <a href="#" class="order-button">ORDER NOW <img src="assets/seta-order-now.png" alt="yellow arrow" class="arrow"></a>
         </div>
     </header>
 
@@ -40,10 +41,33 @@
             <div id="protein-options" class="options-container"></div>
         </section>
 
-        <button id="place-order" disabled>Place My Order</button>
+        <!-- Adicione o contêiner centralizado aqui -->
+        <div class="centralized-container">
+            <button id="place-order" disabled>PLACE MY ORDER<img src="assets/seta-branca.png" alt="yellow arrow"
+                    class="arrow"></button>
+        </div>
 
         <div id="order-status"></div>
     </main>
+
+    <section id="success-section" class="hidden">
+        <div class="success-container">
+            <div class="success-left">
+                <img src="assets/logo-ramen-red.png" alt="RamenGo Logo" class="logo-ramenGO" id="red">
+                <img id="success-image" src="" alt="Ramen Image">
+                <p id="success-order">Your Order:</p>
+                <h2 id="order-details"></h2>
+            </div>
+            <div class="success-right">
+                <img id="bowing-image" src="./assets/bowing.png" alt="bowing Image">
+                <p id="title">どうもありがとうございます。</p>
+                <h1>Your order is being prepared</h1>
+                <p>Hold on, when you least expect you will be eating your ramen.</p>
+                <a id="new-order-button">PLACE NEW ORDER<img src="assets/seta-order-now.png" alt="yellow arrow"
+                        class="arrow"></a>
+            </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
